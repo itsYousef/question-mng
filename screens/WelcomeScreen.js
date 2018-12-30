@@ -181,7 +181,7 @@ class WelcomeScreen extends Component {
 
             <View style={{ alignItems: 'center', width: SCREEN_WIDTH }}>
               <TouchableOpacity
-                onPress={() => Linking.openURL('http://moshaver7.ir/moshaver7.apk')}
+                onPress={() => Linking.openURL('http://gheiredolati.ir/7ostad_mng.apk')}
                 style={{ padding: 8, margin: 8, borderWidth: 2, borderRadius: 15, borderColor: BACKGROUND_COLOR, width: null }}
                 >
                 <Text style={{ fontFamily: 'Vazir-Medium', fontSize: 15, textAlign: 'center', color: BACKGROUND_COLOR }}>دریافت فایل نصبی جدید</Text>
