@@ -48,3 +48,27 @@ export const GET_FILE_ADDRESS = gql`
     }
   }
 `
+
+export const GET_VIDEO_MAJOR = gql`
+  query getVideoMajor{
+    getVideoMajor {
+      id
+      title
+    }
+  }
+`
+
+export const GET_VIDEO_FILES = gql`
+  query getVideoFile(
+    $major: String!
+  ){
+    getVideoFile(
+      major: $major
+    ){
+      id
+      title
+      video
+      pdf
+    }
+  }
+`

@@ -60,6 +60,13 @@ class MainScreen extends Component {
     });
   }
 
+  goToCollegeQuestionScreen = async() => {
+    // let grade = await AsyncStorage.getItem('grade');
+    this.setState({ actionModal: false }, () => {
+      this.props.navigation.navigate('majorQ')
+    });
+  }
+
   signOut = () => {
     AsyncStorage.removeItem('token');
     AsyncStorage.removeItem('grade');
@@ -140,17 +147,17 @@ class MainScreen extends Component {
               </TouchableOpacity>
 
               <TouchableOpacity
-                onPress={() => this.showUnAvailableToast()}
-                style={{ padding: 8, margin: 8, borderWidth: 2, borderRadius: 15, borderColor: 'gray', width: SCREEN_WIDTH * 3 / 4, backgroundColor: 'gray' }}
+                onPress={() => this.goToCollegeQuestionScreen()}
+                style={{ padding: 8, margin: 8, borderWidth: 2, borderRadius: 15, borderColor: BACKGROUND_COLOR, width: SCREEN_WIDTH * 3 / 4, backgroundColor: 'white', elevation: 4 }}
                 >
-                <Text style={{ fontFamily: 'Vazir-Medium', fontSize: 15, textAlign: 'center', color: 'white' }}>برنامه ریزی درسی</Text>
+                <Text style={{ fontFamily: 'Vazir-Medium', fontSize: 15, textAlign: 'center', color: BACKGROUND_COLOR }}>آشنایی با رشته های دانشگاهی</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
                 onPress={() => this.showUnAvailableToast()}
                 style={{ padding: 8, margin: 8, borderWidth: 2, borderRadius: 15, borderColor: 'gray', width: SCREEN_WIDTH * 3 / 4, backgroundColor: 'gray' }}
                 >
-                <Text style={{ fontFamily: 'Vazir-Medium', fontSize: 15, textAlign: 'center', color: 'white' }}>آشنایی با رشته های دانشگاهی</Text>
+                <Text style={{ fontFamily: 'Vazir-Medium', fontSize: 15, textAlign: 'center', color: 'white' }}>برنامه ریزی درسی</Text>
               </TouchableOpacity>
 
               <TouchableOpacity

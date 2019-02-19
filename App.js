@@ -34,6 +34,9 @@ import MainScreen from './screens/MainScreen';
 import Login from './screens/Login';
 import PdfQScreen from './screens/PdfQScreen';
 import PdfAScreen from './screens/PdfAScreen';
+import MajorKnowQuestionScreen from './screens/MajorKnowQuestionScreen';
+import CollegePdfScreen from './screens/CollegePdfScreen';
+import CollegeVideoScreen from './screens/CollegeVideoScreen';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -61,6 +64,39 @@ const AppNavigator = createStackNavigator({
     pdfA: {
       screen: PdfAScreen,
     }
+  }, {
+    lazy: true,
+    animationEnabled: false,
+    tabBarOptions: {
+      scrollEnabled: false,
+      swipeEnabled: false,
+      upperCaseLabel: false,
+      activeTintColor: ACTIVE_COLOR,
+      inactiveTintColor: 'gray',
+      tintColor: '#000',
+      style: {
+        width: SCREEN_WIDTH,
+        backgroundColor: '#FFF',
+      },
+      indicatorStyle: {
+        borderWidth: 2,
+        borderColor: ACTIVE_COLOR,
+      },
+      labelStyle: {
+        fontSize: 15,
+      },
+    },
+  }),
+  majorQ: {
+    screen: MajorKnowQuestionScreen,
+  },
+  college: createMaterialTopTabNavigator({
+    collegeVideo: {
+      screen: CollegeVideoScreen,
+    },
+    collegePdf: {
+      screen: CollegePdfScreen,
+    },
   }, {
     lazy: true,
     animationEnabled: false,

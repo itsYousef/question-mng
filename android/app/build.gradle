@@ -101,8 +101,8 @@ android {
         applicationId "com.questions_mng"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName "2.0"
+        versionCode 3
+        versionName "2.5"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -148,6 +148,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-video')
     compile project(':react-native-pdf')
     compile project(':rn-fetch-blob')
     compile project(':lottie-react-native')
